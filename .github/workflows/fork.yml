@@ -28,4 +28,5 @@ jobs:
           git fetch upstream
           git checkout main
           git merge upstream/main --allow-unrelated-histories
-          git push origin main
+          # Use the PAT token for authentication when pushing
+          git push https://${{ secrets.PAT }}@github.com/zhijieFork/vue-vben-admin.git main
